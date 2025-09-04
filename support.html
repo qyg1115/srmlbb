@@ -1,41 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Customer Support - MLBB Tournament</title>
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/png" href="favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support - MLBB Tournament</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    .support-container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .support-container h1 {
+      color: #ff9800;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .faq {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .faq h3 {
+      background: #ff5722;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+      color: white;
+    }
+
+    .faq p {
+      display: none;
+      padding: 10px;
+      background: #222;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+
+    .contact {
+      margin: 20px 0;
+      background: #333;
+      padding: 15px;
+      border-radius: 10px;
+      color: #f1c40f;
+    }
+
+    .feedback-form input, 
+    .feedback-form textarea, 
+    .feedback-form button {
+      width: 100%;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    .feedback-form button {
+      background: #ff5722;
+      color: white;
+      cursor: pointer;
+    }
+
+    .feedback-form button:hover {
+      background: #e64a19;
+    }
+  </style>
 </head>
 <body>
+  <!-- Background Video -->
   <video autoplay muted loop id="bgVideo">
-  <source src="js.sr.mp4" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
-<nav>
-        <a href="index.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="registration.html">Registration</a>
-        <a href="participants.html">Participants</a>
-        <a href="support.html">Support</a>
-    </nav>
+    <source src="js.sr.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
 
-<div class="text-box">
-    <h1>Customer Support</h1>
-    <p>FAQ Section❓</p>
-    <p>🙋🏻‍♂Can I change my team name after registration?</p>
-    <p>~Yes, please contact us and we will make a procedure to change it. </p>
-    <p>Once the event is going on, team name or players info are not allow to change anymore.<p>
-    <p>🙋🏻‍♂Are there any restrictions on hero picks or skins?</p>
-    <p>~As long as there is a Jungler, a Marksman, a Mage, a Roamer and a Fighter, no restrictions on hero picks.</p>
-    <p>🙋🏻‍♂Can a player join more than one team?</p>
-    <p>~No, one player can only register to one team only.</p>
-    <p>Email: srmlbb@gmail.com</p>
-    <p>Contact: 012-9726230</p>
-    <form>
-        <label>Sent your questions to us:</label><br>
-        <input type="text"><br><br>
-</div>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="registration.html">Registration</a>
+    <a href="participants.html">Participants</a>
+    <a href="support.html">Support</a>
+  </nav>
 
+  <!-- Text Box with Support Content -->
+  <div class="text-box">
+    <div class="support-container">
+      <h1>🛠 Customer Support</h1>
+
+      <!-- FAQ Section -->
+      <div class="faq">
+        <h3>🙋🏻‍♂ Can I change my team name after registration?</h3>
+        <p>Yes, please contact us and we will assist with the procedure. Once the event begins, team names and player info cannot be changed.</p>
+
+        <h3>🙋🏻‍♂ Are there any restrictions on hero picks or skins?</h3>
+        <p>No restrictions, as long as the team includes a Jungler, Marksman, Mage, Roamer, and Fighter.</p>
+
+        <h3>🙋🏻‍♂ Can a player join more than one team?</h3>
+        <p>No, each player may only register with one team.</p>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="contact">
+        <p>📧 Email: <strong>srmlbb@gmail.com</strong></p>
+        <p>📱 Contact: <strong>012-9726230</strong></p>
+      </div>
+
+      <!-- Feedback Form -->
+      <h2 style="color:#ff9800;">📩 Send Us Your Questions</h2>
+      <form class="feedback-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Type your question here..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Simple accordion effect
+    document.querySelectorAll(".faq h3").forEach(item => {
+      item.addEventListener("click", () => {
+        let p = item.nextElementSibling;
+        p.style.display = (p.style.display === "block") ? "none" : "block";
+      });
+    });
+  </script>
 </body>
 </html>
