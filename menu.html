@@ -6,49 +6,98 @@
 <title>Menu - MLBB Tournament</title>
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="favicon.png">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-align: center;
+  }
+
+  table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  th {
+    background-color: #ff5722;
+    color: #fff;
+    font-size: 20px;
+    padding: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  td {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  /* Prize Pool Special Styling */
+  .prize {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .gold { color: #ffd700; }
+  .silver { color: #c0c0c0; }
+  .bronze { color: #cd7f32; }
+  .highlight { color: #ff9800; }
+</style>
 </head>
 <body>
-  <video autoplay muted loop id="bgVideo">
-  <source src="js.sr.mp4" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
-<nav>
-        <a href="index.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="registration.html">Registration</a>
-        <a href="participants.html">Participants</a>
-        <a href="support.html">Support</a>
-    </nav>
 
-<div class="text-box">
-    <h1>Menu</h1>
-    <ul>
-        <li>Upcoming Tournament🎮</li>
-        <p>Start Date: 20 October 2025</p>
-        <p>Finale: 15 November 2025</p>
-        <p>Week 1 🏆 20 Oct 2025 – 26 Oct 2025</p>
-        <p>Opening matches begin! First weekly champion crowned.</p>
-        <p>Week 2 🏆 27 Oct 2025 – 2 Nov 2025</p>
-        <p>Second round of matches and weekly champion decided.</p>
-        <p>Week 3 🏆 3 Nov 2025 – 9 Nov 2025</p>
-        <p>Third round of matches, final chance to qualify for the finale.</p>
-        <p>Grand Finale 👑 15 Nov 2025</p>
-        <p>Weekly champions battle it out for the ultimate title — Sovereign of Realms Champion!</p>
-        <li>Rules & Guidelines📑</li>
-        <p>1. Eligibility & Team Composition</p>
-        <p>-Teams must consist of 1 team leader to communicate with organizer, 5 main players, with up to 2 substitutes allowed.</p>
-        <p>2. Match Format & Progression</p>
-        <p>-Typically single elimination BO3, semifinals BO3, Grand Final as BO5 or BO7 depending on scale. </p>
-        <p>3. Behavior & Manners</p>
-        <p>-Cheating, toxic behavior, hate speech, or offensive tags leads to immediate disqualification. </p>
-        <li>Prize Pool💰</li>
-        <p>🏆Realm Sovereign(Champion):RM5000+Trophy+Medal+Certificate</p>
-        <p>🥈Guardian of the Realm(Runner-up):RM2000+Medal+Certificate</p>
-        <p>🥉Warlord of Valor(Second runner-up):RM1000+Medal+Certificate</p>
-        <p>🎖Knight of Honor(Consolation prize):RM500+Certificate</p>
-        <p>⚔️ The Realm Breaker Award(MVP award):RM200+Special trophy</p>
-    </ul>
-</div> 
+  <video autoplay muted loop id="bgVideo">
+    <source src="js.sr.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="registration.html">Registration</a>
+    <a href="participants.html">Participants</a>
+    <a href="support.html">Support</a>
+  </nav>
+
+<h1 style="color:black;">📜 Tournament Information</h1>
+
+  <!-- Upcoming Tournament -->
+  <table>
+    <tr><th>Upcoming Tournament 🎮</th></tr>
+    <tr><td><b>Start Date:</b> 20 October 2025</td></tr>
+    <tr><td><b>Finale:</b> 15 November 2025</td></tr>
+    <tr><td>🏆 <b>Week 1:</b> 20–26 Oct → Opening matches, first champion crowned.</td></tr>
+    <tr><td>🏆 <b>Week 2:</b> 27 Oct–2 Nov → Second round of matches.</td></tr>
+    <tr><td>🏆 <b>Week 3:</b> 3–9 Nov → Last chance to qualify for finale.</td></tr>
+    <tr><td>👑 <b>Grand Finale:</b> 15 Nov → Battle for Sovereign of Realms Champion!</td></tr>
+  </table>
+
+  <!-- Rules & Guidelines -->
+  <table>
+    <tr><th>Rules & Guidelines 📑</th></tr>
+    <tr><td><b>Eligibility:</b> Teams of 5 + up to 2 substitutes. One leader required.</td></tr>
+    <tr><td><b>Match Format:</b> Single elimination BO3, semifinals BO3, Grand Final BO5/BO7.</td></tr>
+    <tr><td><b>Behavior:</b> Cheating, toxicity, hate speech → <span style="color:red;">Disqualification</span>.</td></tr>
+  </table>
+
+  <!-- Prize Pool -->
+  <table>
+    <tr><th>Prize Pool 💰</th></tr>
+    <tr><td class="prize gold">🏆 Realm Sovereign (Champion): RM5000 + Trophy + Medal + Certificate</td></tr>
+    <tr><td class="prize silver">🥈 Guardian of the Realm (Runner-up): RM2000 + Medal + Certificate</td></tr>
+    <tr><td class="prize bronze">🥉 Warlord of Valor (Second runner-up): RM1000 + Medal + Certificate</td></tr>
+    <tr><td class="prize highlight">🎖 Knight of Honor (Consolation Prize): RM500 + Certificate</td></tr>
+    <tr><td class="prize">⚔️ The Realm Breaker (MVP Award): RM200 + Special Trophy</td></tr>
+  </table>
 
 </body>
 </html>
